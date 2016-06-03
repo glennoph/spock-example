@@ -36,7 +36,7 @@ class DataDrivenSpec extends Specification {
     a | b || c
     3 | 7 || 3
     5 | 4 || 4
-    9 | 9 || 9
+    9 | 9 || 999
   }
 
   def "#person.name is a #sex.toLowerCase() person"() {
