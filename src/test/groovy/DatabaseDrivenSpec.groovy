@@ -17,6 +17,7 @@
 import groovy.sql.Sql
 import spock.lang.Shared
 import spock.lang.Specification
+import spock.lang.*
 
 class DatabaseDrivenSpec extends Specification {
   @Shared sql = Sql.newInstance("jdbc:h2:mem:", "org.h2.Driver")
@@ -34,4 +35,11 @@ class DatabaseDrivenSpec extends Specification {
     where:
     [a, b, c] << sql.rows("select a, b, c from maxdata")
   }
+  
+  @Ignore
+  def "failing test"() {
+    expect:
+    fail()
+  }
+  /**/
 }

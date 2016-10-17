@@ -6,7 +6,7 @@ def gitIgnoreDirs = gitIgnore*.trim().findAll { !it.startsWith("#") && it.endsWi
 
 idea {
   project {
-    jdkName "1.6"
+    jdkName "1.8"
     configure(modules) {
       excludeDirs = files(gitIgnoreDirs) as Set
     }
